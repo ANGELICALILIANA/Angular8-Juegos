@@ -1,0 +1,34 @@
+<div class="fondoweb; fondomovil">
+    <div class="estilodeLetra">
+    <h1>Piedra Papel o Tijera Extendido</h1>
+    </div>
+    <div class="row mt-md-5 col">
+        <div class="col mt-md-3 mt-xs-6">
+            <img class="imagenRedonda mx-auto d-block" [src]="opcionSeleccionada.URL"
+                alt="Imagen que selecciono el jugador">
+        </div>
+        <div class="col">
+            <img class="rounded imagenRedonda mx-auto d-block"
+                src="../../assets/Imagenes_Piedra_Papel_Tijera_Lagarto_Spock/VS.png" alt="Imagen del Versus">
+        </div>
+        <div class="col mt-md-3" >
+            <img id="imagenMaquina" class="rounded imagenRedonda mx-auto d-block" [src]="imagenAleatoria.URL"
+                alt="Imagen aleatoria de la máquina">
+        </div>
+    </div>
+    <div class="mt-md-5">
+        <select id="botonSelect"
+            class="dropdown-menu rounded mx-auto d-block text centarSelect dropdown-primary"
+            [(ngModel)]="opcionSeleccionada" ng-change="ocultarImagenSelect()">
+            <option class="dropdown-item" [ngValue]="elemento" *ngFor="let elemento of opcionesJuego">
+                {{elemento.Nombre}}</option>
+        </select>
+    </div>
+    <div class="mt-md-5">
+        <button id="jugar" class="rounded mx-auto d-block btn btn-outline-danger text-dark btn-lg"
+            (click)="jugarMaquina()">Jugar</button>
+    </div>
+    <div>
+        <h3 id="textoResultado">{{resultadoJuego}}</h3>
+    </div>
+</div>

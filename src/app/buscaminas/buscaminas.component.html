@@ -1,0 +1,23 @@
+<div>
+    <div class="d-flex justify-content-center; cursor">
+        <input [(ngModel)]="columnas" type="number" />
+        <p>{{ columnas }}</p>
+        <input [(ngModel)]="filas" type="number">
+        <p>{{ filas }}</p>
+        <input type="button" (click)="generarTablero()" />
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <div *ngFor="let asteriscos of matrizAsteriscos; let i=index">
+            <div style="width: 30px; height: 30px; border: 2px solid green" *ngFor="let posicion of asteriscos; let j=index">
+                <div>
+                    <p class="text-center" style="background-color: #F4F7F9;" (click)="cambiarColorClick(i,j)">
+                        {{posicion}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>

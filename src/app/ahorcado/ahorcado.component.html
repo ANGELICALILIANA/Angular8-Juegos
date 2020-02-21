@@ -1,0 +1,25 @@
+<div>
+    <div>
+        <h1>Ahorcado</h1>
+    </div>
+    <div class="input-group mb-3">
+        <button class="btn-success" (click)="iniciarNuevoJuego()">Nuevo Juego</button>
+    </div>
+    <div class="row justify-content-center" style="width: 320px; margin: auto;">
+        <div class="text-center" *ngFor="let letra of teclado; let k=index" style=" width:30px; height:30px; margin: 1px; background-color: lightgrey; border-radius: 5px;"
+            (click)="validarLetra(letra)">
+                {{letra}}
+                <br>
+            <div *ngIf="k %10 ==0">
+            </div>
+        </div>
+    </div>
+    <div>
+        <p><br>
+            <img src="../../assets/Imagenes_Ahorcado/Ahorcado.png" alt="Imagen del Ahorcado">
+        </p>
+    </div>
+    <div>{{palabra}}</div>
+    <div>{{textoVictoria}}</div>
+    <div>{{lineasPalabra}}</div>
+</div>
