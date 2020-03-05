@@ -9,14 +9,6 @@
         top: auto
     }
     
-    .estilodeLetra{
-        font-family: cursive;
-        font-style: italic;
-        -webkit-text-stroke: 2px black;
-        color: transparent; 
-        text-align: center  
-    }
-    
     .estilosBotonSelect{
         padding: 3rem 1s;
         padding-top: 0.5rem;
@@ -24,23 +16,54 @@
         padding-bottom: 0.5rem;
         padding-left: 2px;
     }
-    
-    .fondoweb{
+
+    .posicionFondoWeb{
         position: absolute;
-        height: 100%;
-        width: 100%;
-        background-color: #B9CCCE;
+        opacity: 0.1;
+        z-index: -1;
     }
+
+    .tituloWeb{
+        text-align: center;
+        color: #6C7A79  ;
+        -webkit-text-stroke: 1px #D7E1E0;
+        font-size: 60px;
+        font-family: 'Impact';
+        font-weight: 600;
+    }
+
+    .frente{
+        z-index: 100;
+    }
+
+    .imagenFondo{
+        z-index: -1;
+    }
+
+
 }
 
 @media (max-width: 767px) {
-    
-    .fondomovil{
+
+    .posicionFondoMovil{
         position: absolute;
-        height: 100%;
-        width: 100%;
-        background-color: #B9CCCE;
+        opacity: 0.1;
+        z-index: -1;
     }
 
+    .tituloMovil{
+        text-align: center;
+    }
+
+    .frente{
+        z-index: 100;
+    }
+
+    .imagenFondo{
+        z-index: -1;
+    }
+    
 }
+
+
 

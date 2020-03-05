@@ -1,6 +1,9 @@
-<div class="fondoweb; fondomovil">
-    <div class="estilodeLetra">
-    <h1>Piedra Papel o Tijera Extendido</h1>
+
+<img class="posicionFondoWeb posicionFondoMovil" src="../../assets/Imagenes_Piedra_Papel_Tijera_Lagarto_Spock/Fondo.png"
+    alt="Imagen de Fondo">
+<div class="frente">
+    <div>
+        <br><h1 class="tituloWeb tituloMovil">Piedra Papel o Tijera Extendido</h1>
     </div>
     <div class="row mt-md-5 col">
         <div class="col mt-md-3 mt-xs-6">
@@ -8,17 +11,16 @@
                 alt="Imagen que selecciono el jugador">
         </div>
         <div class="col">
-            <img class="rounded imagenRedonda mx-auto d-block"
+            <img class="rounded imagenRedonda mx-auto d-block imagenFondo"
                 src="../../assets/Imagenes_Piedra_Papel_Tijera_Lagarto_Spock/VS.png" alt="Imagen del Versus">
         </div>
-        <div class="col mt-md-3" >
+        <div class="col mt-md-3">
             <img id="imagenMaquina" class="rounded imagenRedonda mx-auto d-block" [src]="imagenAleatoria.URL"
                 alt="Imagen aleatoria de la máquina">
         </div>
     </div>
     <div class="mt-md-5">
-        <select id="botonSelect"
-            class="dropdown-menu rounded mx-auto d-block text centarSelect dropdown-primary"
+        <select id="botonSelect" class="dropdown-menu rounded mx-auto d-block text centarSelect dropdown-primary"
             [(ngModel)]="opcionSeleccionada" ng-change="ocultarImagenSelect()">
             <option class="dropdown-item" [ngValue]="elemento" *ngFor="let elemento of opcionesJuego">
                 {{elemento.Nombre}}</option>

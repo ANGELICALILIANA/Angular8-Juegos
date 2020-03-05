@@ -37,6 +37,8 @@ export class PiedraSinglePlayerComponent implements OnInit {
 
   jugarMaquina() {
 
+    console.log("Se dañó :'(");
+
     this.imagenAleatoria = this.opcionesJuego[Math.floor(Math.random() * (4 - 0 + 1)) + 0];
 
     document.getElementById("imagenMaquina").style.visibility = "visible";
