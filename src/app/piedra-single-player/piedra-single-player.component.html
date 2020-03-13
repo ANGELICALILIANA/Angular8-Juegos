@@ -1,26 +1,25 @@
-<img style="width: 100%; height: 100%;" class="posicionFondo"
-    src="../../assets/Imagenes_Piedra_Papel_Tijera_Lagarto_Spock/Fondo.png" alt="Imagen de Fondo">
-<div class="frente">
+<img class="posicionFondo diseñoPantalla" src="../../assets/Imagenes_Piedra_Papel_Tijera_Lagarto_Spock/Fondo.png"
+    alt="Imagen de Fondo diseñoPantalla">
+<div class="frente diseñoPantalla">
     <div>
         <br><br>
         <h1 class="titulo tituloMovil">Piedra Papel o Tijera Extendido</h1>
     </div>
     <br>
-    <div class="container">
+    <div class="container" style="margin: auto">
         <div class="row">
-            <div class="col-md">
-                <br><img style="width: 270px; height: auto;" class="imagenRedonda mx-auto d-block"
-                    [src]="opcionSeleccionada.URL" alt="Imagen que selecciono el jugador">
+            <div class="col-md tamañoImagenes">
+                <br><img class="imagenRedonda mx-auto d-block tamañoImagenes" [src]="opcionSeleccionada.URL"
+                    alt="Imagen que selecciono el jugador">
             </div>
-            <div class="col-md">
-                <br><img class="rounded imagenRedonda mx-auto d-block imagenFondo img"
+            <div class="col-md tamañoImagenes tamañoVs">
+                <br><img class="rounded imagenRedonda mx-auto d-block imagenFondo img tamañoImagenes tamañoVs"
                     src="../../assets/Imagenes_Piedra_Papel_Tijera_Lagarto_Spock/VS.png" alt="Imagen del Versus">
             </div>
 
-            <div class="col-md">
-                <br><img id="imagenMaquina" style="width: 270px; height: auto;"
-                    class="rounded imagenRedonda mx-auto d-block" [src]="imagenAleatoria.URL"
-                    alt="Imagen aleatoria de la máquina">
+            <div class="col-md tamañoImagenes">
+                <br><img id="imagenMaquina" class="rounded imagenRedonda mx-auto d-block tamañoImagenes"
+                    [src]="imagenAleatoria.URL" alt="Imagen aleatoria de la máquina">
             </div>
         </div>
     </div>

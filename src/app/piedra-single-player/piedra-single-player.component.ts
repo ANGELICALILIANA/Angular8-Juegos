@@ -37,8 +37,6 @@ export class PiedraSinglePlayerComponent implements OnInit {
 
   jugarMaquina() {
 
-    console.log("Se dañ");
-
     this.imagenAleatoria = this.opcionesJuego[Math.floor(Math.random() * (4 - 0 + 1)) + 0];
 
     document.getElementById("imagenMaquina").style.visibility = "visible";
@@ -59,7 +57,7 @@ export class PiedraSinglePlayerComponent implements OnInit {
         break;
 
       case "Papel":
-        if (this.imagenAleatoria.Nombre == "Piedra" || this.imagenAleatoria.Nombre == "Spoke") {
+        if (this.imagenAleatoria.Nombre == "Piedra" || this.imagenAleatoria.Nombre == "Spock") {
           this.resultadoJuego = "Ganador";
         }
         else {
@@ -77,7 +75,7 @@ export class PiedraSinglePlayerComponent implements OnInit {
         break;
 
       case "Lagarto":
-        if (this.imagenAleatoria.Nombre == "Papel" || this.imagenAleatoria.Nombre == "Spoke") {
+        if (this.imagenAleatoria.Nombre == "Papel" || this.imagenAleatoria.Nombre == "Spock") {
           this.resultadoJuego = "Ganador";
         }
         else {
@@ -92,6 +90,8 @@ export class PiedraSinglePlayerComponent implements OnInit {
           this.resultadoJuego = "Perdedor";
         break;
     }
+
+    console.log(this.resultadoJuego);
 
     if(this.resultadoJuego == "Ganador")
       document.getElementById("textoResultado").style.color = "#A1EA96";
