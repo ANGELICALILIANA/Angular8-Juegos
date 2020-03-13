@@ -1,29 +1,48 @@
 @media (min-width: 768px) {
+
     .imagenRedonda{ 
+
         border-radius: 30px !important;
     }
     
     .centarSelect{
+
         position: relative !important;
         float: none !important;
         top: auto
     }
     
     .estilosBotonSelect{
-        padding: 3rem 1s;
-        padding-top: 0.5rem;
-        padding-right: 10px;
-        padding-bottom: 0.5rem;
-        padding-left: 2px;
+        
+        color: #6C7A79;
+        border-top-width: thick;
+        border-right-width: thick;
+        background-clip: content-box;
+        font-family: 'Agency FB';
+        font-size: 20px;
+        font-weight: bold;
+        border-top-color: #6C7A79;
+        border-right-color: #6C7A79;
+        border-left-color: #6C7A79;
+        border-bottom-color: #6C7A79;
     }
 
-    .posicionFondoWeb{
+    .opcionesSelect{
+
+        font-family: 'Agency FB';
+        font-size: 20px;
+        color: #6C7A79;
+    }
+
+    .posicionFondo{
+
         position: absolute;
         opacity: 0.1;
         z-index: -1;
     }
 
-    .tituloWeb{
+    .titulo{
+
         text-align: center;
         color: #6C7A79  ;
         -webkit-text-stroke: 1px #D7E1E0;
@@ -33,35 +52,39 @@
     }
 
     .frente{
+
         z-index: 100;
     }
 
-    .imagenFondo{
-        z-index: -1;
+    .estilosBotonJugar{
+
+        font-family: 'Agency FB';
+        border-top-width: medium;
+        border-left-width: medium;
+        border-right-width: medium;
+        border-bottom-width: medium;
+        font-weight: bold;
+        font-size: 40px;
     }
 
+    .resultadoJuego{
 
+        font-family: 'Agency FB';
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .centar{
+
+        align-items: center;
+    }
+  
 }
+
+
 
 @media (max-width: 767px) {
 
-    .posicionFondoMovil{
-        position: absolute;
-        opacity: 0.1;
-        z-index: -1;
-    }
-
-    .tituloMovil{
-        text-align: center;
-    }
-
-    .frente{
-        z-index: 100;
-    }
-
-    .imagenFondo{
-        z-index: -1;
-    }
     
 }
 

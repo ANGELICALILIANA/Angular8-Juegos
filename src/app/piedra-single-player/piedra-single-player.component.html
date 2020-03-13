@@ -1,36 +1,45 @@
-
-<img class="posicionFondoWeb posicionFondoMovil" src="../../assets/Imagenes_Piedra_Papel_Tijera_Lagarto_Spock/Fondo.png"
-    alt="Imagen de Fondo">
+<img style="width: 100%; height: 100%;" class="posicionFondo"
+    src="../../assets/Imagenes_Piedra_Papel_Tijera_Lagarto_Spock/Fondo.png" alt="Imagen de Fondo">
 <div class="frente">
     <div>
-        <br><h1 class="tituloWeb tituloMovil">Piedra Papel o Tijera Extendido</h1>
+        <br><br>
+        <h1 class="titulo tituloMovil">Piedra Papel o Tijera Extendido</h1>
     </div>
-    <div class="row mt-md-5 col">
-        <div class="col mt-md-3 mt-xs-6">
-            <img class="imagenRedonda mx-auto d-block" [src]="opcionSeleccionada.URL"
-                alt="Imagen que selecciono el jugador">
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <br><img style="width: 270px; height: auto;" class="imagenRedonda mx-auto d-block"
+                    [src]="opcionSeleccionada.URL" alt="Imagen que selecciono el jugador">
+            </div>
+            <div class="col-md">
+                <br><img class="rounded imagenRedonda mx-auto d-block imagenFondo img"
+                    src="../../assets/Imagenes_Piedra_Papel_Tijera_Lagarto_Spock/VS.png" alt="Imagen del Versus">
+            </div>
+
+            <div class="col-md">
+                <br><img id="imagenMaquina" style="width: 270px; height: auto;"
+                    class="rounded imagenRedonda mx-auto d-block" [src]="imagenAleatoria.URL"
+                    alt="Imagen aleatoria de la máquina">
+            </div>
         </div>
-        <div class="col">
-            <img class="rounded imagenRedonda mx-auto d-block imagenFondo"
-                src="../../assets/Imagenes_Piedra_Papel_Tijera_Lagarto_Spock/VS.png" alt="Imagen del Versus">
-        </div>
-        <div class="col mt-md-3">
-            <img id="imagenMaquina" class="rounded imagenRedonda mx-auto d-block" [src]="imagenAleatoria.URL"
-                alt="Imagen aleatoria de la máquina">
-        </div>
     </div>
-    <div class="mt-md-5">
-        <select id="botonSelect" class="dropdown-menu rounded mx-auto d-block text centarSelect dropdown-primary"
-            [(ngModel)]="opcionSeleccionada" ng-change="ocultarImagenSelect()">
-            <option class="dropdown-item" [ngValue]="elemento" *ngFor="let elemento of opcionesJuego">
-                {{elemento.Nombre}}</option>
-        </select>
-    </div>
-    <div class="mt-md-5">
-        <button id="jugar" class="rounded mx-auto d-block btn btn-outline-danger text-dark btn-lg"
-            (click)="jugarMaquina()">Jugar</button>
-    </div>
-    <div>
-        <h3 id="textoResultado">{{resultadoJuego}}</h3>
+</div>
+<br>
+<div>
+    <select id="botonSelect" class="dropdown-menu rounded mx-auto d-block text centarSelect estilosBotonSelect"
+        [(ngModel)]="opcionSeleccionada" ng-change="ocultarImagenSelect()">
+        <option class="dropdown-item opcionesSelect" [ngValue]="elemento" *ngFor="let elemento of opcionesJuego">
+            {{elemento.Nombre}}</option>
+    </select>
+</div>
+<br>
+<div>
+    <button id="jugar" class="rounded mx-auto d-block btn btn-outline-secondary btn-lg estilosBotonJugar"
+        (click)="jugarMaquina()">Jugar</button>
+    <br><br>
+    <div style="width: 230px; height: auto;" class="container">
+        <MARQUEE style="width: 200px; height: auto;" class="mx-auto; resultadoJuego" id="textoResultado"
+            BGCOLOR="#6C7A79">{{resultadoJuego}}</MARQUEE>
     </div>
 </div>
